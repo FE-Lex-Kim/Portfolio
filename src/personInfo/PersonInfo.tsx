@@ -31,7 +31,6 @@ const PersonInfo: React.FC = () => {
           {infosArr.map(({ title, content }: InfosItem) => (
             <PersonInfoItem>
               <PersonInfoH3>{title}</PersonInfoH3>
-
               {Array.isArray(content) ? (
                 content.map((item) => (
                   <PersonInfoParagraph>{item}</PersonInfoParagraph>
@@ -39,17 +38,37 @@ const PersonInfo: React.FC = () => {
               ) : (
                 <PersonInfoParagraph>{content}</PersonInfoParagraph>
               )}
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
             </PersonInfoItem>
           ))}
         </PersonInfoList>
         <PersonInfoImg src={personImg} alt="내 얼굴" />
+        <PersonInfoBodyLineBox />
       </PersonInfoWidthContainer>
     </PersonInfoBackgroundContainer>
   );
 };
+const PersonInfoBodyLineBox = styled.div`
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+
+  width: 270px;
+  height: 500px;
+  border: 3px solid #a4193d;
+  border-bottom: transparent;
+`;
+
 const PersonInfoBackgroundContainer = styled.div`
   background-color: #fad0c9;
   color: #6e6e6d;
+  border-bottom: 3px solid #a4193d;
 `;
 
 const PersonInfoWidthContainer = styled.div`
@@ -67,29 +86,236 @@ const PersonInfoH2 = styled.h2`
   height: 0;
 `;
 const PersonInfoList = styled.ul`
-  li:nth-child(1) {
+  & > li > span {
+    display: block;
+    position: absolute;
+    background-color: #a4193d;
+  }
+  & > li > span:nth-of-type(1),
+  & > li > span:nth-of-type(5) {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 100%;
+  }
+
+  & > li:nth-of-type(1) {
     left: 1.875rem;
     bottom: 1.875rem;
+    & > span:nth-of-type(1) {
+      top: -40px;
+      right: -300px;
+
+      transform: translate(40%, -40%);
+    }
+    & > span:nth-of-type(2) {
+      top: -40px;
+      right: -300px;
+
+      width: 130px;
+      height: 3px;
+    }
+    & > span:nth-of-type(3) {
+      top: -40px;
+      right: -170px;
+
+      width: 3px;
+      height: 56px;
+    }
+    & > span:nth-of-type(4) {
+      width: 130px;
+      height: 3px;
+
+      top: 15px;
+      right: -170px;
+    }
+    & > span:nth-of-type(5) {
+      top: 8.5px;
+      right: -45px;
+    }
   }
-  li:nth-child(2) {
+  & > li:nth-of-type(2) {
     left: 150px;
     bottom: 250px;
+    & > span:nth-of-type(1) {
+      bottom: 20px;
+      right: -223px;
+      transform: translate(52%, 40%);
+    }
+    & > span:nth-of-type(2) {
+      width: 90px;
+      height: 3px;
+
+      bottom: 20px;
+      right: -223px;
+    }
+    & > span:nth-of-type(3) {
+      width: 3px;
+      height: 63px;
+
+      bottom: 20px;
+      right: -133px;
+    }
+    & > span:nth-of-type(4) {
+      width: 90px;
+      height: 3px;
+
+      bottom: 83px;
+      right: -133px;
+    }
+    & > span:nth-of-type(5) {
+      bottom: 83px;
+      right: -43px;
+      transform: translate(40%, 40%);
+    }
   }
-  li:nth-child(3) {
-    left: 200px;
+  & > li:nth-of-type(3) {
+    left: 150px;
     top: 50px;
+    & > span:nth-of-type(1) {
+      bottom: -45px;
+      right: -115px;
+
+      transform: translate(40%, 40%);
+    }
+    & > span:nth-of-type(2) {
+      width: 50px;
+      height: 3px;
+
+      bottom: -45px;
+      right: -115px;
+    }
+    & > span:nth-of-type(3) {
+      width: 3px;
+      height: 130px;
+
+      bottom: -45px;
+      right: -65px;
+    }
+    & > span:nth-of-type(4) {
+      width: 50px;
+      height: 3px;
+
+      bottom: 85px;
+      right: -65px;
+    }
+    & > span:nth-of-type(5) {
+      bottom: 85px;
+      right: -23px;
+
+      transform: translateY(40%);
+    }
   }
-  li:nth-child(4) {
-    right: 240px;
+  & > li:nth-of-type(4) {
+    right: 200px;
     top: 50px;
+    & > span:nth-of-type(1) {
+      left: -140px;
+      bottom: -42px;
+
+      transform: translate(-40%, 40%);
+    }
+    & > span:nth-of-type(2) {
+      width: 45px;
+      height: 3px;
+
+      left: -140px;
+      bottom: -42px;
+    }
+    & > span:nth-of-type(3) {
+      width: 3px;
+      height: 126px;
+
+      left: -95px;
+      bottom: -42px;
+    }
+    & > span:nth-of-type(4) {
+      width: 45px;
+      height: 3px;
+
+      bottom: 84px;
+      left: -95px;
+    }
+    & > span:nth-of-type(5) {
+      left: -50px;
+      bottom: 84px;
+
+      transform: translate(-40%, 40%);
+    }
   }
-  li:nth-child(5) {
-    right: 100px;
+  & > li:nth-of-type(5) {
+    right: 50px;
     bottom: 210px;
+    & > span:nth-of-type(1) {
+      top: 104px;
+      left: -140px;
+
+      transform: translate(-40%, -40%);
+    }
+    & > span:nth-of-type(2) {
+      width: 75px;
+      height: 3px;
+
+      top: 104px;
+      left: -140px;
+    }
+    & > span:nth-of-type(3) {
+      height: 90px;
+      width: 3px;
+
+      top: 14px;
+      left: -68px;
+    }
+    & > span:nth-of-type(4) {
+      width: 75px;
+      height: 3px;
+
+      top: 14px;
+      left: -68px;
+    }
+    & > span:nth-of-type(5) {
+      top: 14px;
+      left: -7px;
+
+      transform: translate(40%, -40%);
+    }
   }
-  li:nth-child(6) {
-    right: 1.875rem;
-    bottom: 1.875rem;
+  & > li:nth-of-type(6) {
+    right: 4.375rem;
+    bottom: 2.5rem;
+    & > span:nth-of-type(1) {
+      top: -30px;
+      left: -198px;
+
+      transform: translate(-40%, -40%);
+    }
+    & > span:nth-of-type(2) {
+      width: 100px;
+      height: 3px;
+
+      top: -30px;
+      left: -198px;
+    }
+    & > span:nth-of-type(3) {
+      height: 44px;
+      width: 3px;
+
+      top: -30px;
+      left: -98px;
+    }
+    & > span:nth-of-type(4) {
+      width: 100px;
+      height: 3px;
+
+      top: 14px;
+      left: -98px;
+    }
+    & > span:nth-of-type(5) {
+      top: 14px;
+      left: 2px;
+
+      transform: translate(-40%, -40%);
+    }
   }
 `;
 const PersonInfoItem = styled.li`
@@ -110,6 +336,7 @@ const PersonInfoParagraph = styled.p`
 `;
 const PersonInfoImg = styled.img`
   position: absolute;
+  z-index: 100;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0; /* 맨 아래에 위치 */
