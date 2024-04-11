@@ -1,5 +1,15 @@
-const App: React.FC = () => {
-  return <div></div>;
+import Header from "./components/Header";
+
+type Props = {
+  children?: JSX.Element;
+};
+
+const App: React.FC<Props> = () => {
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default App;
