@@ -92,7 +92,7 @@ const PersonInfoBodyLineBox = styled.div`
 
   width: 270px;
   height: 500px;
-  border: 3px solid #a4193d;
+  border: 3px solid #f2aa4c;
   border-bottom: transparent;
   opacity: 0;
 
@@ -100,9 +100,10 @@ const PersonInfoBodyLineBox = styled.div`
 `;
 
 const PersonInfoBackgroundContainer = styled.div`
-  background-color: #fad0c9;
-  color: #6e6e6d;
-  border-bottom: 3px solid #a4193d;
+  background-color: white;
+
+  color: #f2aa4c;
+  border-bottom: 3px solid #f2aa4c;
 `;
 
 const PersonInfoWidthContainer = styled.div`
@@ -124,7 +125,7 @@ const PersonInfoList = styled.ul`
   & > li > span {
     display: block;
     position: absolute;
-    background-color: #a4193d;
+    background-color: #f2aa4c;
     opacity: 0;
   }
   & > li > span:nth-of-type(1),
@@ -393,6 +394,7 @@ const PersonInfoList = styled.ul`
 `;
 const PersonInfoItem = styled.li`
   position: absolute;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -402,10 +404,16 @@ const PersonInfoH3 = styled.h3`
   font-size: 2.1875rem;
   font-weight: 900;
   margin: 0;
+
+  opacity: 0;
+  animation: ${appearCircle} 0.5s linear 2.5s forwards;
 `;
 const PersonInfoParagraph = styled.p`
   font-size: 1.25rem;
   font-weight: 600;
+
+  opacity: 0;
+  animation: ${appearCircle} 0.5s linear 2.5s forwards;
 `;
 const PersonInfoImg = styled.img`
   position: absolute;

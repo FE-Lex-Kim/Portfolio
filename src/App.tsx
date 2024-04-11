@@ -1,19 +1,15 @@
-import styled from "styled-components";
-import PersonInfo from "./personInfo/PersonInfo";
+import Header from "./components/Header";
+
 type Props = {
   children?: JSX.Element;
 };
 
 const App: React.FC<Props> = () => {
   return (
-    <AppContainer>
-      <PersonInfo />
-    </AppContainer>
+    <div>
+      <Header />
+    </div>
   );
 };
-
-const AppContainer = styled.div`
-  margin: 0 auto;
-`;
 
 export default App;
