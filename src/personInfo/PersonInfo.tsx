@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import personImg from "../assets/images/나.png";
 
 type InfoTitle =
@@ -52,6 +52,37 @@ const PersonInfo: React.FC = () => {
     </PersonInfoBackgroundContainer>
   );
 };
+
+const appearCircle = keyframes`
+100% {
+  opacity: 1;
+}
+`;
+
+const moveHorizontalityLine = (width: number) => keyframes`
+0%{
+  opacity: 1;
+  width: 0;
+}
+
+100%{
+  width: ${width}px;
+  opacity: 1;
+}
+`;
+
+const moveVerticalLine = (height: number) => keyframes`
+0%{
+  opacity: 1;
+  height: 0;
+}
+
+100%{
+  opacity: 1;
+  height: ${height}px;
+}
+`;
+
 const PersonInfoBodyLineBox = styled.div`
   position: absolute;
   top: 15%;
@@ -63,6 +94,9 @@ const PersonInfoBodyLineBox = styled.div`
   height: 500px;
   border: 3px solid #a4193d;
   border-bottom: transparent;
+  opacity: 0;
+
+  animation: ${appearCircle} 0.5s linear 0s forwards;
 `;
 
 const PersonInfoBackgroundContainer = styled.div`
@@ -85,11 +119,13 @@ const PersonInfoH2 = styled.h2`
   width: 0;
   height: 0;
 `;
+
 const PersonInfoList = styled.ul`
   & > li > span {
     display: block;
     position: absolute;
     background-color: #a4193d;
+    opacity: 0;
   }
   & > li > span:nth-of-type(1),
   & > li > span:nth-of-type(5) {
@@ -102,36 +138,43 @@ const PersonInfoList = styled.ul`
   & > li:nth-of-type(1) {
     left: 1.875rem;
     bottom: 1.875rem;
+
     & > span:nth-of-type(1) {
       top: -40px;
       right: -300px;
 
       transform: translate(40%, -40%);
+      animation: ${appearCircle} 0.5s linear forwards;
     }
     & > span:nth-of-type(2) {
       top: -40px;
       right: -300px;
 
-      width: 130px;
       height: 3px;
+
+      animation: ${moveHorizontalityLine(130)} 1s linear 0s forwards;
     }
     & > span:nth-of-type(3) {
       top: -40px;
       right: -170px;
 
       width: 3px;
-      height: 56px;
+
+      animation: ${moveVerticalLine(56)} 0.5s linear 1s forwards;
     }
     & > span:nth-of-type(4) {
-      width: 130px;
       height: 3px;
 
       top: 15px;
       right: -170px;
+
+      animation: ${moveHorizontalityLine(130)} 1s linear 1.5s forwards;
     }
     & > span:nth-of-type(5) {
       top: 8.5px;
       right: -45px;
+
+      animation: ${appearCircle} 0.5s linear 2.5s forwards;
     }
   }
   & > li:nth-of-type(2) {
@@ -141,32 +184,37 @@ const PersonInfoList = styled.ul`
       bottom: 20px;
       right: -223px;
       transform: translate(52%, 40%);
+
+      animation: ${appearCircle} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(2) {
-      width: 90px;
       height: 3px;
 
       bottom: 20px;
       right: -223px;
+      animation: ${moveHorizontalityLine(90)} 1s linear 0s forwards;
     }
     & > span:nth-of-type(3) {
       width: 3px;
-      height: 63px;
 
       bottom: 20px;
       right: -133px;
+
+      animation: ${moveVerticalLine(63)} 0.5s linear 1s forwards;
     }
     & > span:nth-of-type(4) {
-      width: 90px;
       height: 3px;
 
       bottom: 83px;
       right: -133px;
+
+      animation: ${moveHorizontalityLine(90)} 1s linear 1.5s forwards;
     }
     & > span:nth-of-type(5) {
       bottom: 83px;
       right: -43px;
       transform: translate(40%, 40%);
+      animation: ${appearCircle} 0.5s linear 2.5s forwards;
     }
   }
   & > li:nth-of-type(3) {
@@ -177,6 +225,8 @@ const PersonInfoList = styled.ul`
       right: -115px;
 
       transform: translate(40%, 40%);
+
+      animation: ${appearCircle} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(2) {
       width: 50px;
@@ -184,26 +234,31 @@ const PersonInfoList = styled.ul`
 
       bottom: -45px;
       right: -115px;
+
+      animation: ${moveHorizontalityLine(50)} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(3) {
       width: 3px;
-      height: 130px;
 
       bottom: -45px;
       right: -65px;
+
+      animation: ${moveVerticalLine(130)} 1.5s linear 0.5s forwards;
     }
     & > span:nth-of-type(4) {
-      width: 50px;
       height: 3px;
 
       bottom: 85px;
       right: -65px;
+
+      animation: ${moveHorizontalityLine(50)} 0.5s linear 2s forwards;
     }
     & > span:nth-of-type(5) {
       bottom: 85px;
       right: -23px;
 
       transform: translateY(40%);
+      animation: ${appearCircle} 0.5s linear 2.5s forwards;
     }
   }
   & > li:nth-of-type(4) {
@@ -214,33 +269,37 @@ const PersonInfoList = styled.ul`
       bottom: -42px;
 
       transform: translate(-40%, 40%);
+
+      animation: ${appearCircle} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(2) {
-      width: 45px;
       height: 3px;
 
       left: -140px;
       bottom: -42px;
+
+      animation: ${moveHorizontalityLine(45)} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(3) {
       width: 3px;
-      height: 126px;
 
       left: -95px;
       bottom: -42px;
+      animation: ${moveVerticalLine(126)} 1.5s linear 0.5s forwards;
     }
     & > span:nth-of-type(4) {
-      width: 45px;
       height: 3px;
 
       bottom: 84px;
       left: -95px;
+      animation: ${moveHorizontalityLine(45)} 0.5s linear 2s forwards;
     }
     & > span:nth-of-type(5) {
       left: -50px;
       bottom: 84px;
 
       transform: translate(-40%, 40%);
+      animation: ${appearCircle} 0.5s linear 2.5s forwards;
     }
   }
   & > li:nth-of-type(5) {
@@ -251,20 +310,24 @@ const PersonInfoList = styled.ul`
       left: -140px;
 
       transform: translate(-40%, -40%);
+
+      animation: ${appearCircle} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(2) {
-      width: 75px;
       height: 3px;
 
       top: 104px;
       left: -140px;
+
+      animation: ${moveHorizontalityLine(75)} 0.8s linear 0s forwards;
     }
     & > span:nth-of-type(3) {
-      height: 90px;
       width: 3px;
 
-      top: 14px;
+      bottom: 62px;
       left: -68px;
+
+      animation: ${moveVerticalLine(90)} 0.9s linear 0.8s forwards;
     }
     & > span:nth-of-type(4) {
       width: 75px;
@@ -272,12 +335,15 @@ const PersonInfoList = styled.ul`
 
       top: 14px;
       left: -68px;
+
+      animation: ${moveHorizontalityLine(75)} 0.8s linear 1.7s forwards;
     }
     & > span:nth-of-type(5) {
       top: 14px;
       left: -7px;
 
       transform: translate(40%, -40%);
+      animation: ${appearCircle} 0.5s linear 2.5s forwards;
     }
   }
   & > li:nth-of-type(6) {
@@ -288,33 +354,40 @@ const PersonInfoList = styled.ul`
       left: -198px;
 
       transform: translate(-40%, -40%);
+
+      animation: ${appearCircle} 0.5s linear 0s forwards;
     }
     & > span:nth-of-type(2) {
-      width: 100px;
       height: 3px;
 
       top: -30px;
       left: -198px;
+
+      animation: ${moveHorizontalityLine(100)} 1s linear 0s forwards;
     }
     & > span:nth-of-type(3) {
-      height: 44px;
       width: 3px;
 
       top: -30px;
       left: -98px;
+
+      animation: ${moveVerticalLine(44)} 0.5s linear 1s forwards;
     }
     & > span:nth-of-type(4) {
-      width: 100px;
       height: 3px;
 
       top: 14px;
       left: -98px;
+
+      animation: ${moveHorizontalityLine(100)} 1s linear 1.5s forwards;
     }
     & > span:nth-of-type(5) {
       top: 14px;
       left: 2px;
 
       transform: translate(-40%, -40%);
+
+      animation: ${appearCircle} 0.5s linear 2.5s forwards;
     }
   }
 `;
