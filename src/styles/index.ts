@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 
 import behance from "../assets/font/behance-656346cc88819.otf";
+import hackney from "../assets/font/HackneyPersonalUseOnly.ttf";
 import ptSansRegular from "../assets/font/PTSans-Regular.ttf";
 import ptSansBold from "../assets/font/PTSans-Bold.ttf";
 
@@ -11,7 +12,10 @@ export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: "behance"; // 이름 선언
     src: url(${behance}); // src 폴더에 저장한 경로
-    font-weight: bold;
+  }
+  @font-face {
+    font-family: "hackney"; // 이름 선언
+    src: url(${hackney}); // src 폴더에 저장한 경로
   }
   @font-face {
     font-family: "ptSansRegular"; // 이름 선언

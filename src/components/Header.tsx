@@ -27,11 +27,12 @@ const Header = () => {
 const HeaderWidthContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 80rem;
+
+  max-width: 1440px;
   height: 85px;
 
-  padding: 0 1.875rem 0 1.25rem;
-  background-color: #344c36; // 나중에 지워주기
+  margin: 0 auto;
+  padding: 10px 2.1875rem 1.5625rem;
 `;
 const StarIcon = styled(Star)`
   width: 3rem;
@@ -40,7 +41,7 @@ const StarIcon = styled(Star)`
 `;
 const Name = styled.h2`
   font-family: "behance";
-  font-size: 1.75rem;
+  font-size: 1.875rem;
   color: #f7f1e3;
   padding-top: 7px;
 `;
@@ -48,19 +49,20 @@ const PageList = styled.ul`
   display: flex;
   margin-left: auto;
   & > li:nth-of-type(4) > a {
-    padding: 5px 15px;
+    padding: 7px 20px;
 
     background-color: #faad1b;
     color: #000;
 
     border-radius: 20px;
+    font-size: 16px;
   }
 `;
 
 const PageItem = styled.li``;
 
 const Link = styled.a`
-  font-size: 1.0625rem;
+  font-size: 20px;
   margin-left: 3.125rem;
   color: #f7f1e3;
 `;

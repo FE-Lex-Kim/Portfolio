@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Main from "./components/Main";
 
 type Props = {
   children?: JSX.Element;
@@ -7,7 +7,7 @@ type Props = {
 const App: React.FC<Props> = () => {
   return (
     <div>
-      <Header />
+      <Main />
     </div>
   );
 };

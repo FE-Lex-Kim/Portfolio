@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import personImg from "../assets/images/나.png";
+import personImg from "../assets/images/나.png";
 
 type InfoTitle =
   | "Contact"
