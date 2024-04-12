@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Header>;
 export const Primary: Story = {
   render: () => (
     <JustifyCenter>
-      <Header />
+      <Header currentPage="Main" fontColor="white" />
     </JustifyCenter>
   ),
 };
@@ -24,4 +24,5 @@ export const Primary: Story = {
 const JustifyCenter = styled.div`
   display: flex;
   justify-content: center;
+  background-color: #344c36;
 `;

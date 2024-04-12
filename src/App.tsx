@@ -1,3 +1,4 @@
+import AboutMe from "./components/AboutMe";
 import Main from "./components/Main";
 
 type Props = {
@@ -6,9 +7,10 @@ type Props = {
 
 const App: React.FC<Props> = () => {
   return (
-    <div>
+    <>
       <Main />
-    </div>
+      <AboutMe />
+    </>
   );
 };
 

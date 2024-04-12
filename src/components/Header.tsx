@@ -1,20 +1,31 @@
 import styled from "styled-components";
 import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.svg";
 
-const Header = () => {
+type Props = {
+  fontColor: "white" | "black";
+  currentPage: "AboutMe" | "Main" | "Portfolio";
+};
+
+const Header: React.FC<Props> = ({ fontColor, currentPage }) => {
   return (
     <HeaderWidthContainer>
       <StarIcon />
-      <Name>Eojin Kim</Name>
-      <PageList>
+      <Name fontColor={fontColor}>Eojin Kim</Name>
+      <PageList currentPage={currentPage}>
         <PageItem>
-          <Link href="#">About me</Link>
+          <Link fontColor={fontColor} href="#">
+            Main
+          </Link>
         </PageItem>
         <PageItem>
-          <Link href="#">Resume</Link>
+          <Link fontColor={fontColor} href="#">
+            AboutMe
+          </Link>
         </PageItem>
         <PageItem>
-          <Link href="#">Portfolio</Link>
+          <Link fontColor={fontColor} href="#">
+            Portfolio
+          </Link>
         </PageItem>
         <PageItem>
           <Link href="#">Get in touch!</Link>
@@ -39,13 +50,17 @@ const StarIcon = styled(Star)`
   fill: #f2603c;
   margin-right: 0.3125rem;
 `;
-const Name = styled.h2`
+const Name = styled.h2<{ fontColor?: "white" | "black" }>`
   font-family: "behance";
   font-size: 1.875rem;
-  color: #f7f1e3;
+
+  color: ${({ fontColor }) => (fontColor === "white" ? "#f7f1e3" : "#000")};
+
   padding-top: 7px;
 `;
-const PageList = styled.ul`
+const PageList = styled.ul<{
+  currentPage?: "Main" | "AboutMe" | "Portfolio";
+}>`
   display: flex;
   margin-left: auto;
   & > li:nth-of-type(4) > a {
@@ -56,15 +71,31 @@ const PageList = styled.ul`
 
     border-radius: 20px;
     font-size: 16px;
+    font-weight: bold;
+  }
+
+  & > li:nth-of-type(1) > a {
+    font-weight: ${({ currentPage }) =>
+      currentPage === "Main" ? "700" : "300"};
+  }
+  & > li:nth-of-type(2) > a {
+    font-weight: ${({ currentPage }) =>
+      currentPage === "AboutMe" ? "700" : "300"};
+  }
+  & > li:nth-of-type(3) > a {
+    font-weight: ${({ currentPage }) =>
+      currentPage === "Portfolio" ? "700" : "300"};
   }
 `;
 
 const PageItem = styled.li``;
 
-const Link = styled.a`
+const Link = styled.a<{
+  fontColor?: "white" | "black";
+}>`
   font-size: 20px;
   margin-left: 3.125rem;
-  color: #f7f1e3;
+  color: ${({ fontColor }) => (fontColor === "white" ? "#f7f1e3" : "#000")};
 `;
 
 export default Header;

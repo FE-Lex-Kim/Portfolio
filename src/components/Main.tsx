@@ -5,28 +5,58 @@ import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.s
 
 const Main: React.FC = () => {
   return (
-    <MainBackgroundColorContainer>
-      <Header />
-      <MainWidthContainer>
-        <EojinKimImageContainer>
-          <FirstStarIcon />
-          <SecondStarIcon />
-          <ThirdStarIcon />
-        </EojinKimImageContainer>
-        <PortfolioList>
-          <PortfolioItem>PORTFOLIO</PortfolioItem>
-          <PortfolioItem>PORTFOLIO</PortfolioItem>
-          <PortfolioItem>PORTFOLIO</PortfolioItem>
-          <PortfolioItem>PORTFOLIO</PortfolioItem>
-        </PortfolioList>
-        <ContactList>
-          <ContactItem>Gmail: /lexkim.dev</ContactItem>
-          <ContactItem>Github: /FE-Lex-Kim</ContactItem>
-        </ContactList>
-      </MainWidthContainer>
-    </MainBackgroundColorContainer>
+    <>
+      <MainGreenBackgroundColorContainer>
+        <Header currentPage="Main" fontColor="white" />
+        <MainWidthContainer>
+          <EojinKimImageContainer>
+            <FirstStarIcon />
+            <SecondStarIcon />
+            <ThirdStarIcon />
+          </EojinKimImageContainer>
+          <PortfolioList>
+            <PortfolioItem>PORTFOLIO</PortfolioItem>
+            <PortfolioItem>PORTFOLIO</PortfolioItem>
+            <PortfolioItem>PORTFOLIO</PortfolioItem>
+            <PortfolioItem>PORTFOLIO</PortfolioItem>
+          </PortfolioList>
+          <ShortPersonInfos>
+            저는 효율성과 정확성을 중요시 여기는 개발자입니다. 프론트엔드의
+            사용자와 밀접하게 개발하는 업무가 마음에 듭니다. 또한 화면에
+            보여지는 프로그래밍에 흥미를 느끼고 디자이너와 백엔드 사이에서
+            커뮤니케이션하는 것을 즐기고 있습니다.
+          </ShortPersonInfos>
+          <ContactList>
+            <ContactItem>Gmail: /lexkim.dev</ContactItem>
+            <ContactItem>Github: /FE-Lex-Kim</ContactItem>
+          </ContactList>
+        </MainWidthContainer>
+      </MainGreenBackgroundColorContainer>
+      <MainBlackBackgroundColorContainer></MainBlackBackgroundColorContainer>
+    </>
   );
 };
+
+const ShortPersonInfos = styled.p`
+  position: absolute;
+  z-index: 30;
+  top: 550px;
+  left: -60px;
+
+  color: #f7f1e3;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 20px;
+
+  width: 400px;
+`;
+
+const MainBlackBackgroundColorContainer = styled.div`
+  position: relative;
+  background-color: #000;
+  height: 244px;
+  z-index: -1;
+`;
 const ContactItem = styled.li`
   color: #f7f1e3;
   font-size: 25px;
@@ -121,7 +151,7 @@ const MainWidthContainer = styled.div`
   margin: 0 auto;
 `;
 
-const MainBackgroundColorContainer = styled.div`
+const MainGreenBackgroundColorContainer = styled.div`
   background-color: #344c36;
   height: 644px;
 `;
