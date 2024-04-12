@@ -23,11 +23,11 @@ const AboutMe = () => {
               I'm Eojin!
             </AboutMeSayHello>
             <AboutMeIntroduce>
-              캐나다에서 워킹홀리데이 경험과 TOEIC 810점으로 영어 번역이
-              수월합니다. 꾸준한 TIL 작성으로 Github에서 400개이상의 Star를
-              받았습니다. 또한 프론트엔드 성능 최적화에 관심이 많아 지속적인
-              스터디와 프로젝트 참여를 통해 적용하고 성장하고 싶은 개발자
-              입니다.
+              캐나다에서 워킹홀리데이 경험과 TOEIC 810점으로 영문으로된 기술
+              문서를 보이는데 수월합니다. 꾸준한 TIL 작성으로 Github에서
+              400개이상의 Star를 받았습니다. 또한 프론트엔드 성능 최적화에
+              관심이 많아 지속적인 스터디와 프로젝트 참여를 통해 적용하고
+              성장하고 싶은 개발자 입니다.
             </AboutMeIntroduce>
             <AboutMeNotionLink
               target="_blank"
@@ -211,6 +211,7 @@ const ScrollDown = styled.p`
 const AboutMeWidthContainer = styled.div`
   position: relative;
   width: 1100px;
+  height: 680px;
   margin: 0 auto;
 `;
 

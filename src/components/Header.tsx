@@ -3,35 +3,43 @@ import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.s
 
 type Props = {
   fontColor: "white" | "black";
-  currentPage: "AboutMe" | "Main" | "Portfolio";
+  currentPage: "AboutMe" | "Main" | "Portfolio" | "Resume";
 };
 
 const Header: React.FC<Props> = ({ fontColor, currentPage }) => {
   return (
-    <HeaderWidthContainer>
-      <StarIcon />
-      <Name fontColor={fontColor}>Eojin Kim</Name>
-      <PageList currentPage={currentPage}>
-        <PageItem>
-          <Link fontColor={fontColor} href="#">
-            Main
-          </Link>
-        </PageItem>
-        <PageItem>
-          <Link fontColor={fontColor} href="#">
-            AboutMe
-          </Link>
-        </PageItem>
-        <PageItem>
-          <Link fontColor={fontColor} href="#">
-            Portfolio
-          </Link>
-        </PageItem>
-        <PageItem>
-          <Link href="#">Get in touch!</Link>
-        </PageItem>
-      </PageList>
-    </HeaderWidthContainer>
+    <>
+      <div id={currentPage} />
+      <HeaderWidthContainer>
+        <StarIcon />
+        <Name fontColor={fontColor}>Eojin Kim</Name>
+        <PageList currentPage={currentPage}>
+          <PageItem>
+            <Link fontColor={fontColor} href="#Main">
+              Main
+            </Link>
+          </PageItem>
+          <PageItem>
+            <Link fontColor={fontColor} href="#AboutMe">
+              AboutMe
+            </Link>
+          </PageItem>
+          <PageItem>
+            <Link fontColor={fontColor} href="#Resume">
+              Resume
+            </Link>
+          </PageItem>
+          <PageItem>
+            <Link fontColor={fontColor} href="#Portfolio">
+              Portfolio
+            </Link>
+          </PageItem>
+          <PageItem>
+            <Link href="#">Get in touch!</Link>
+          </PageItem>
+        </PageList>
+      </HeaderWidthContainer>
+    </>
   );
 };
 
@@ -59,11 +67,11 @@ const Name = styled.h2<{ fontColor?: "white" | "black" }>`
   padding-top: 7px;
 `;
 const PageList = styled.ul<{
-  currentPage?: "Main" | "AboutMe" | "Portfolio";
+  currentPage?: "Main" | "AboutMe" | "Portfolio" | "Resume";
 }>`
   display: flex;
   margin-left: auto;
-  & > li:nth-of-type(4) > a {
+  & > li:nth-of-type(5) > a {
     padding: 7px 20px;
 
     background-color: #faad1b;
@@ -83,6 +91,10 @@ const PageList = styled.ul<{
       currentPage === "AboutMe" ? "700" : "300"};
   }
   & > li:nth-of-type(3) > a {
+    font-weight: ${({ currentPage }) =>
+      currentPage === "Resume" ? "700" : "300"};
+  }
+  & > li:nth-of-type(4) > a {
     font-weight: ${({ currentPage }) =>
       currentPage === "Portfolio" ? "700" : "300"};
   }
