@@ -70,7 +70,7 @@ export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'batang';
     src: url(${batang});
-    font-weight: 400;
+    font-weight: 300;
     unicode-range: U+AC00-D7A3;
   }
 
