@@ -11,16 +11,11 @@ import HTMLIcon from "../assets/icons/html-5.svg";
 import JavascriptIcon from "../assets/icons/javascript-js.svg";
 import ReactIcon from "../assets/icons/react.svg";
 import TypeScriptIcon from "../assets/icons/typescript-icon.svg";
-import NextJsIcon from "../assets/icons/nextjs.svg";
 import StyledComponentIcon from "../assets/icons/styled-components.svg";
 import TailwindIcon from "../assets/icons/tailwind-css.svg";
 import ReduxToolkitIcon from "../assets/icons/redux-original.svg";
 import ReactQueryIcon from "../assets/icons/react-query-seeklogo.svg";
 import StorybookIcon from "../assets/icons/storybook-icon.svg";
-import CypressIcon from "../assets/icons/cypress.svg";
-import WebpackIcon from "../assets/icons/webpack-original.svg";
-import GitIcon from "../assets/icons/git.svg";
-import PuppeteerIcon from "../assets/icons/puppeteer.svg";
 import MswIcon from "../assets/icons/msw-mock-service-worker-seeklogo.svg";
 
 type PortfolioArr = {
@@ -321,6 +316,7 @@ const PortfolioTitle = styled.h3`
 `;
 const PortfolioImg = styled.img`
   width: 800px;
+  height: 800px;
   margin-right: 50px;
 `;
 
@@ -329,13 +325,17 @@ const PortfolioWidthContainer = styled.div`
   width: 1300px;
 
   padding: 50px;
-  margin: 100px auto;
+  margin: 150px auto;
 
   background-color: #f6f1e3;
 `;
 const PortfolioBackgroundColor = styled.div`
   background-color: #000;
-  padding-bottom: 300px;
+  padding-bottom: 100px;
+
+  & > div:nth-of-type(6) > div > img {
+    height: 600px;
+  }
 `;
 
 export default Portfolio;
