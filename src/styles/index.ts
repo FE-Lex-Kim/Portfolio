@@ -13,7 +13,10 @@ import robotoLight from "../assets/font/Roboto-Light.ttf";
 import robotoMedium from "../assets/font/Roboto-Medium.ttf";
 import robotoBold from "../assets/font/Roboto-Bold.ttf";
 
-import batang from "../assets/font/Batang_Regular.woff";
+import NotoSansKRBold from "../assets/font/NotoSansKR-Bold.ttf";
+import NotoSansKRLight from "../assets/font/NotoSansKR-Light.ttf";
+import NotoSansKRMedium from "../assets/font/NotoSansKR-Medium.ttf";
+import NotoSansKRRegular from "../assets/font/NotoSansKR-Regular.ttf";
 
 export const GlobalStyles = createGlobalStyle`
   ${normalize}
@@ -68,16 +71,35 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'batang';
-    src: url(${batang});
-    font-weight: 300;
-    unicode-range: U+AC00-D7A3;
+    font-family: "NotoSansKR"; // 이름 선언
+    src: url(${NotoSansKRBold}); // src 폴더에 저장한 경로
+    font-weight: 700;
+    unicode-range: U+0030-0039,U+0041-005A,U+0061-007A;
   }
-
+  @font-face {
+    font-family: "NotoSansKR"; // 이름 선언
+    src: url(${NotoSansKRMedium}); // src 폴더에 저장한 경로
+    font-weight: 500;
+    unicode-range: U+0030-0039,U+0041-005A,U+0061-007A;
+  }
+  @font-face {
+    font-family: "NotoSansKR"; // 이름 선언
+    src: url(${NotoSansKRRegular}); // src 폴더에 저장한 경로
+    font-weight: 400;
+    unicode-range: U+0030-0039,U+0041-005A,U+0061-007A;
+  }
+  @font-face {
+    font-family: "NotoSansKR"; // 이름 선언
+    src: url(${NotoSansKRLight}); // src 폴더에 저장한 경로
+    font-weight: 300;
+    unicode-range: U+0030-0039,U+0041-005A,U+0061-007A;
+  }
+  
   // You can continue writing global styles here
   body{
-    font-family: "title" ,"roboto";
+    font-family: "NotoSansKR" ,"roboto";
     font-weight: 300;
+    box-sizing: border-box;
   }
 
   a {

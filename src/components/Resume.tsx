@@ -15,6 +15,8 @@ import StorybookIcon from "../assets/icons/storybook-icon.svg";
 import CypressIcon from "../assets/icons/cypress.svg";
 import WebpackIcon from "../assets/icons/webpack-original.svg";
 import GitIcon from "../assets/icons/git.svg";
+import PuppeteerIcon from "../assets/icons/puppeteer.svg";
+import MswIcon from "../assets/icons/msw-mock-service-worker-seeklogo.svg";
 
 import { ReactComponent as Pointer } from "../assets/icons/pointer.svg";
 import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.svg";
@@ -42,6 +44,8 @@ const Resume = () => {
     { title: "Cypress", iconSrc: CypressIcon },
     { title: "Webpack", iconSrc: WebpackIcon },
     { title: "Git", iconSrc: GitIcon },
+    { title: "Puppeteer", iconSrc: PuppeteerIcon },
+    { title: "MSW", iconSrc: MswIcon },
   ];
 
   return (
@@ -236,7 +240,7 @@ const ResumeLearningJourneyList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 600px;
+  width: 640px;
 `;
 
 const ResumeLearningJourneyTitle = styled.h3`

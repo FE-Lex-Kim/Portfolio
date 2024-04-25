@@ -70,13 +70,13 @@ const EducationEducationList = styled.ul`
   display: flex;
   flex-direction: column;
 
-  color: #000;
+  color: #f6f1e3;
   margin: 0;
 `;
 
 const EducationEducationTitle = styled.h3`
   font-family: "behance";
-  color: #000;
+  color: #faad1a;
   font-size: 50px;
   margin-bottom: 0;
   padding-left: 50px;
@@ -97,7 +97,7 @@ const EducationWidthContainer = styled.div`
 `;
 
 const EducationBackgroundContainer = styled.div`
-  background-color: #f6f1e3;
+  background-color: #344c36;
 
   display: flex;
   align-items: center;

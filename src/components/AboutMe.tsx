@@ -6,7 +6,7 @@ import { ReactComponent as Envelope } from "../assets/icons/envelope-regular.svg
 import { ReactComponent as Location } from "../assets/icons/location-dot-solid.svg";
 import { ReactComponent as Phone } from "../assets/icons/phone-solid.svg";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
     <>
       <AboutMeBackgroundWhiteColorContainer>
