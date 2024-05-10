@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "./Header";
 import { ReactComponent as MagnifyingGlass } from "../assets/icons/magnifying-glass-solid.svg";
-import personImage from "/assets/images/나2.png";
+import personImage from "../assets/images/나2.png";
 import { ReactComponent as Envelope } from "../assets/icons/envelope-regular.svg";
 import { ReactComponent as Location } from "../assets/icons/location-dot-solid.svg";
 import { ReactComponent as Phone } from "../assets/icons/phone-solid.svg";

@@ -4,7 +4,7 @@ import Header from "./Header";
 import portfolioSiteImg from "../assets/images/포트폴리오사이트.png";
 import cherryPickImg from "../assets/images/체리픽사이트.png";
 import kurlyImg from "../assets/images/마켓컬리.png";
-import watflicha from "../assets/images/왓플리챠.png";
+// import watflicha from "../assets/images/왓플리챠.png";
 
 import CSSIcon from "../assets/icons/css-3.svg";
 import HTMLIcon from "../assets/icons/html-5.svg";
@@ -162,41 +162,41 @@ const Portfolio: React.FC = () => {
       projectNotionHref:
         "https://third-shrine-13d.notion.site/Kurlabo-cf4cee7c49df4d27836363720060c111?pvs=4",
     },
-    {
-      mainImgSrc: watflicha,
-      projectTitle: "Watflicha site",
-      projectDescription: (
-        <>
-          <b>
-            그 동안 공부한 <PinkColor>CSS, HTML, Vanilla JavaScript</PinkColor>
-            만을 사용하여 OTT 플랫폼을 구현하고자 했습니다.
-          </b>
-          <br />
-          <br />
-          이를 통해 캐러셀과 모달 창 등 다양한 인터페이스 구성 요소를 직접
-          개발함으로써 JavaScript에 대한 깊은 이해와 함께 실질적인 코딩 자신감을
-          얻을 수 있었습니다.
-          <br />
-          <br />
-          Vanilla JavaScript를 활용하여 외부 라이브러리에 대한 의존도를
-          최소화하고, 이로 인해 페이지의 로딩 시간과 전반적인 성능을 효과적으로
-          최적화할 수 있었습니다.
-        </>
-      ),
-      projectSkillArr: [
-        { projectSkillImgSrc: HTMLIcon, projectSkillText: "HTML" },
-        {
-          projectSkillImgSrc: CSSIcon,
-          projectSkillText: "CSS",
-        },
-        {
-          projectSkillImgSrc: JavascriptIcon,
-          projectSkillText: "JavaScript",
-        },
-      ],
-      projectNotionHref:
-        "https://third-shrine-13d.notion.site/WATFLICAH-e1dc7df262ce4ba8a152a539cd5d26c4?pvs=4",
-    },
+    // {
+    //   mainImgSrc: watflicha,
+    //   projectTitle: "Watflicha site",
+    //   projectDescription: (
+    //     <>
+    //       <b>
+    //         그 동안 공부한 <PinkColor>CSS, HTML, Vanilla JavaScript</PinkColor>
+    //         만을 사용하여 OTT 플랫폼을 구현하고자 했습니다.
+    //       </b>
+    //       <br />
+    //       <br />
+    //       이를 통해 캐러셀과 모달 창 등 다양한 인터페이스 구성 요소를 직접
+    //       개발함으로써 JavaScript에 대한 깊은 이해와 함께 실질적인 코딩 자신감을
+    //       얻을 수 있었습니다.
+    //       <br />
+    //       <br />
+    //       Vanilla JavaScript를 활용하여 외부 라이브러리에 대한 의존도를
+    //       최소화하고, 이로 인해 페이지의 로딩 시간과 전반적인 성능을 효과적으로
+    //       최적화할 수 있었습니다.
+    //     </>
+    //   ),
+    //   projectSkillArr: [
+    //     { projectSkillImgSrc: HTMLIcon, projectSkillText: "HTML" },
+    //     {
+    //       projectSkillImgSrc: CSSIcon,
+    //       projectSkillText: "CSS",
+    //     },
+    //     {
+    //       projectSkillImgSrc: JavascriptIcon,
+    //       projectSkillText: "JavaScript",
+    //     },
+    //   ],
+    //   projectNotionHref:
+    //     "https://third-shrine-13d.notion.site/WATFLICAH-e1dc7df262ce4ba8a152a539cd5d26c4?pvs=4",
+    // },
   ];
 
   return (
