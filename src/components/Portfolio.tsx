@@ -6,9 +6,9 @@ import cherryPickImg from "../assets/images/체리픽사이트.png";
 import kurlyImg from "../assets/images/마켓컬리.png";
 // import watflicha from "../assets/images/왓플리챠.png";
 
-import CSSIcon from "../assets/icons/css-3.svg";
-import HTMLIcon from "../assets/icons/html-5.svg";
-import JavascriptIcon from "../assets/icons/javascript-js.svg";
+// import CSSIcon from "../assets/icons/css-3.svg";
+// import HTMLIcon from "../assets/icons/html-5.svg";
+// import JavascriptIcon from "../assets/icons/javascript-js.svg";
 import ReactIcon from "../assets/icons/react.svg";
 import TypeScriptIcon from "../assets/icons/typescript-icon.svg";
 import StyledComponentIcon from "../assets/icons/styled-components.svg";
