@@ -1,3 +1,4 @@
+import React from "react";
 import AboutMe from "./components/AboutMe";
 import Main from "./components/Main";
 import Portfolio from "./components/Portfolio";
