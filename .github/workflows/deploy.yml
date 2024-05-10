@@ -25,12 +25,20 @@ jobs:
         run: npm run build
         working-directory: .
 
+      - name: List Project Directory Contents
+        run: ls -la
+        working-directory: .
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: List Project Directory Contents
+        run: ls -la
+        working-directory: .
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
