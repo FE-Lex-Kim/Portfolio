@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import backgroundImgMe from "../assets/images/나3.png";
 import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.svg";
+import React from "react";
 
 const Main: React.FC = () => {
   return (

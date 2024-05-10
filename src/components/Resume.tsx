@@ -22,6 +22,7 @@ import { ReactComponent as Pointer } from "../assets/icons/pointer.svg";
 import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.svg";
 import tilTableOfContentImg from "../assets/images/검정TIL목차.png";
 import Education from "./Education";
+import React from "react";
 
 type ResumeSkillList = {
   title: string;

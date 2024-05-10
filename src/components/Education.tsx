@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as Star } from "../assets/icons/star-alt-3-svgrepo-com.svg";
+import React from "react";
 
 const Education: React.FC = () => {
   return (
