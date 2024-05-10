@@ -40,6 +40,7 @@ jobs:
 
       - name: Deploy to S3
         run: aws s3 sync build/ s3://lexkim-portpolio --delete
+        working-directory: .
 
       - name: Invalidate CloudFront Distribution
         run: aws cloudfront create-invalidation --distribution-id E1QU0SP725D6Y2 --paths "/*"
