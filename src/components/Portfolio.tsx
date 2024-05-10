@@ -35,8 +35,8 @@ const Portfolio: React.FC = () => {
       projectDescription: (
         <>
           <b>
-            제가 진행했던 프로젝트와 저에대한 소개를 담긴 포트폴리오 사이트를
-            만들어 보았습니다.
+            제가 진행했던 프로젝트와 소개를 담긴 포트폴리오 사이트를 만들어
+            보았습니다.
           </b>
           <br />
           <br />
@@ -72,7 +72,8 @@ const Portfolio: React.FC = () => {
         },
         { projectSkillImgSrc: StorybookIcon, projectSkillText: "Storybook" },
       ],
-      projectNotionHref: "#노션주소 넣기",
+      projectNotionHref:
+        "https://third-shrine-13d.notion.site/Portfolio-Site-171a69a52c804805a5c47d15505578e4?pvs=4",
     },
     {
       mainImgSrc: cherryPickImg,
@@ -111,7 +112,8 @@ const Portfolio: React.FC = () => {
         { projectSkillImgSrc: StorybookIcon, projectSkillText: "Storybook" },
         { projectSkillImgSrc: MswIcon, projectSkillText: "MSW" },
       ],
-      projectNotionHref: "#노션주소 넣기",
+      projectNotionHref:
+        "https://third-shrine-13d.notion.site/bd250dd0efa24af2a9ab2e0daed877dd?pvs=4",
     },
     {
       mainImgSrc: kurlyImg,
@@ -156,7 +158,8 @@ const Portfolio: React.FC = () => {
         },
         { projectSkillImgSrc: StorybookIcon, projectSkillText: "Storybook" },
       ],
-      projectNotionHref: "#노션주소 넣기",
+      projectNotionHref:
+        "https://third-shrine-13d.notion.site/Kurlabo-cf4cee7c49df4d27836363720060c111?pvs=4",
     },
     {
       mainImgSrc: watflicha,
@@ -190,7 +193,8 @@ const Portfolio: React.FC = () => {
           projectSkillText: "JavaScript",
         },
       ],
-      projectNotionHref: "#노션주소 넣기",
+      projectNotionHref:
+        "https://third-shrine-13d.notion.site/WATFLICAH-e1dc7df262ce4ba8a152a539cd5d26c4?pvs=4",
     },
   ];
 
@@ -229,7 +233,7 @@ const Portfolio: React.FC = () => {
                     )
                   )}
                 </PortfolioSkillList>
-                <PortfolioReadDetail href={projectNotionHref}>
+                <PortfolioReadDetail target="_blank" href={projectNotionHref}>
                   자세히 설명 ▶ Notion
                 </PortfolioReadDetail>
               </PortfolioDescriptionLayoutContainer>
